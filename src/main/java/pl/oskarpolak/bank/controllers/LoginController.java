@@ -17,7 +17,7 @@ public class LoginController {
                         ){
         if(login.equals("oskar") && password.equals("admin") && !nick.isEmpty()){
             model.addAttribute("nickname", nick);
-            return "redirect:/dashboardTemplate";
+            return "redirect:/dashboard";
         }
         model.addAttribute("error", "Podałeś nieprawidłowe dane!");
        return "loginTemplate";

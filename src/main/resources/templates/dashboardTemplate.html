@@ -11,7 +11,7 @@
        <h1 th:text="${infoCredit} ? 'Dostałeś kredyt!' : 'Nie ma kredytu :('"></h1>
   </div>
 
- <form th:if="${infoCredit} == null" th:action="@{/dashboard}" th:object="@{formRequest}" method="post">
+ <form th:if="${infoCredit} == null" th:action="@{/dashboard}" th:object="${formRequest}" method="post">
      Dochód miesięczny: <input th:field="*{monthCash}" type="number"> <br/>
      Zobowiązania miesięczne: <input th:field="*{minusCash}" type="number">  <br/>
      Okres kredytowania: <input th:field="*{creditTime}" type="number">  <br/>
